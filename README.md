@@ -6,6 +6,7 @@
 **Theme:** Smart Automation | **Category:** Software  
 
 ---
+prototype:https://nershield-ai.onrender.com/
 
 ## 🌟 Executive Overview
 The North Eastern Region (NER) of India comprises 8 states characterized by rugged Himalayan terrain, heavy seasonal monsoons, frequent landslides, flash floods, and vulnerable arterial bridges. When key transit corridors (such as NH-27, NH-8, or MDR-1) are disrupted, essential medicine, food rations, and disaster relief can be delayed for days.
