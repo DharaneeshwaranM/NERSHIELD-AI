@@ -12,15 +12,15 @@ class Settings(BaseSettings):
     DEBUG: bool = True
 
     # Security
-    SECRET_KEY: str = "ner-shield-super-secret-key-change-in-production-2024"
+    SECRET_KEY: str
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
     # Database
-    DATABASE_URL: str = "postgresql+asyncpg://nershield:nershield123@localhost:5432/nershield_db"
+    DATABASE_URL: str
     POSTGRES_USER: str = "nershield"
-    POSTGRES_PASSWORD: str = "nershield123"
+    POSTGRES_PASSWORD: str
     POSTGRES_DB: str = "nershield_db"
 
     # Redis

@@ -8,7 +8,7 @@ services:
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-nershield}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-nershield123}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
       POSTGRES_DB: ${POSTGRES_DB:-nershield_db}
     ports:
       - "5432:5432"
@@ -46,9 +46,9 @@ services:
       redis:
         condition: service_healthy
     environment:
-      - DATABASE_URL=postgresql+asyncpg://nershield:nershield123@db:5432/nershield_db
+      - DATABASE_URL=postgresql+asyncpg://nershield:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/nershield_db
       - REDIS_URL=redis://redis:6379/0
-      - SECRET_KEY=ner-shield-ai-sih-2024-secret-key-development
+      - SECRET_KEY=${SECRET_KEY:?Set SECRET_KEY in .env}
       - ENVIRONMENT=production
     ports:
       - "8000:8000"
